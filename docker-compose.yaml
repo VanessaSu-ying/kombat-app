@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  kombat:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: kombat-docker
+    container_name: kombat
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      PORT: ${PORT}
